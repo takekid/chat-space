@@ -7,5 +7,13 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = render partial: 'layouts/flash'
+    %header
+      .left-contents
+        .content1
+          .box1
+        .content2
+      .right-contents
+        .content3
+        .content4
+        .content5
     = yield
