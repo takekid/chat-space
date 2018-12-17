@@ -1,0 +1,175 @@
+@import "./reset";
+@import './color_stock.scss/';
+@import './awesome.scss/';
+
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+.message{
+  background-color: $sky-blue;
+  text-align: center;
+  }
+
+
+  .left-contents{
+    height: 100vh;
+    width: 300px;
+    float: left;
+    .user{
+      background-color: $left-content-color;
+      height: 15%;
+    }
+  }
+  .user_form{
+    height: 30px;
+    width: 100%;
+    margin: auto 0;
+    position: relative;
+    top: 45px;
+  }
+    .user_name{
+      font-size: 20px;
+      color: $left-text-color;
+      font-family: bold;
+      position: absolute;
+      left: 20px;
+    }
+    .fas:before{
+      @include font ();
+      color: white;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    }
+    .fa-edit:before{
+      @include font();
+      color: white;
+    position: absolute;
+    right: 40px;
+    top: 5px;
+    }
+
+  .group{
+    background-color: $group-color;
+    height:85%;
+    width: 100%;
+    .group_box{
+      height: 100px;
+      color:$left-text-color;
+      padding-top: 20px;
+      padding-left: 20px;
+      .group_box p{
+        font-size: 15px;
+      }
+      .text{
+        font-size: 11px;
+      }
+    }
+  }
+
+
+  .right-contents{
+    height: 100vh;
+    width: calc(100vw - 300px);
+    float: left;
+    position: relative;
+    .up_content{
+      height: 15%;
+      border: 1px solid #eeeeee;
+      input[type="button"]{
+        height: 50px;
+        width: 70px;
+        border: solid 1px $border-color;
+        position: absolute;
+        top: 55px;
+        right: 60px;
+      }
+      .group_name{
+        height: 100px;
+        width: 600px;
+        padding-top: 35px;
+        padding-left: 40px;
+        font-size: 20px;
+        color: $title-color;
+        .member{
+          font-size:12px;
+          color: $sub-text-color;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+
+    .mid_content{
+      height: calc(100vh - 15% - 90px);
+      .mid_box{
+        height: 100px;
+        padding-top: 46px;
+        margin-left: 40px;
+        .mid_name{
+          font-size: 16px;
+          font-family: bold;
+          color: $right-text-color;
+          float: left;
+        }
+        .mid_day{
+          font-size:12px;
+          color: $sub-text-color;
+          float: left;
+          padding-left: 10px;
+        }
+        .mid_text{
+          font-size:14px;
+          color: $right-text-color;
+          clear: both;
+          padding-top: 10px;
+        }
+      }
+    }
+
+
+    .down_content{
+      background-color: $left-color;
+      height: 88px;
+       width: 100%;
+       form{
+        position: relative;
+        height: 50px;
+          .text_box{
+            height: 50px;
+            input[type="text"]{
+              height: 50px;
+              width: 63vw;
+              position: relative;
+              top: 20px;
+              left: 40px;
+              z-index: 1;
+            }
+            .image_box{
+              position: absolute;
+              top: 40px;
+              right: 200px;
+              z-index: 2;
+            }
+            .fa-image{
+              @include font();
+            }
+            #filesend{
+              display: none;
+            }
+          }
+        }
+          input[type="submit"]{
+            color: white;
+            background-color: $sky-blue;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            bottom: 20px;
+            right: 40px;
+          }
+        }
