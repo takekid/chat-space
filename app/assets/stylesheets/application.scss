@@ -1,4 +1,6 @@
 @import "./reset";
+@import './color_stock.scss/';
+@import './awesome.scss/';
 
 html,body{
   height: 100%;
@@ -6,7 +8,7 @@ html,body{
 }
 
   .message{
-    background-color: #38AEF0;
+    background-color: $sky-blue;
       text-align: center;
   }
 
@@ -16,7 +18,7 @@ html,body{
     width: 300px;
     float: left;
     .user{
-      background-color: #253141;
+      background-color: $left-content-color;
       height: 15%;
     }
   }
@@ -29,43 +31,33 @@ html,body{
   }
     .user_name{
       font-size: 20px;
-      color: #ffffff;
+      color: $left-text-color;
       font-family: bold;
       position: absolute;
       left: 20px;
     }
     .fas:before{
-      display:block;
-    content:"\f061";
-    width:20px;
-    height:20px;
-    font-family: "Font Awesome 5 Free";
-    font-weight:900;
-    color: white;
+      @include font ();
+      color: white;
     position: absolute;
     right: 20px;
     top: 5px;
     }
     .fa-edit:before{
-        display:block;
-    content:"\f061";
-    width:20px;
-    height:20px;
-    font-family: "Font Awesome 5 Free";
-    font-weight:900;
-    color: white;
+      @include font();
+      color: white;
     position: absolute;
     right: 40px;
     top: 5px;
     }
 
   .group{
-    background-color: #2f3e51;
+    background-color: $group-color;
     height:85%;
     width: 100%;
     .group_box{
       height: 100px;
-      color:#ffffff;
+      color:$left-text-color;
       padding-top: 20px;
       padding-left: 20px;
       .group_box p{
@@ -89,7 +81,7 @@ html,body{
       input[type="button"]{
         height: 50px;
         width: 70px;
-        border: solid 1px #38AEF0;
+        border: solid 1px $border-color;
         position: absolute;
         top: 55px;
         right: 60px;
@@ -100,10 +92,10 @@ html,body{
         padding-top: 35px;
         padding-left: 40px;
         font-size: 20px;
-        color: #333333;
+        color: $title-color;
         .member{
           font-size:12px;
-          color:#999999;
+          color: $sub-text-color;
           margin-top: 15px;
         }
       }
@@ -120,18 +112,18 @@ html,body{
         .mid_name{
           font-size: 16px;
           font-family: bold;
-          color:#434A54;
+          color: $right-text-color;
           float: left;
         }
         .mid_day{
           font-size:12px;
-          color: #999999;
+          color: $sub-text-color;
           float: left;
           padding-left: 10px;
         }
         .mid_text{
           font-size:14px;
-          color: #434A54;
+          color: $right-text-color;
           clear: both;
           padding-top: 10px;
         }
@@ -140,7 +132,7 @@ html,body{
 
 
     .down_content{
-      background-color: #AAAAAA;
+      background-color: $left-color;
       height: 88px;
        width: 100%;
        form{
@@ -163,12 +155,7 @@ html,body{
               z-index: 2;
             }
             .fa-image{
-           display:block;
-           content:"\f061";
-           width:20px;
-           height:20px;
-           font-family: "Font Awesome 5 Free";
-           font-weight:900;
+              @include font();
             }
             #filesend{
               display: none;
@@ -177,7 +164,7 @@ html,body{
         }
           input[type="submit"]{
             color: white;
-            background-color: #38AEF0;
+            background-color: $sky-blue;
             height: 50px;
             width: 100px;
             position: absolute;
