@@ -1,6 +1,6 @@
 @mixin font (){
   &:after{
-display:block;
+    display:block;
     content:"\f061";
     width:20px;
     height:20px;
