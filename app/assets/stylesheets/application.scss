@@ -4,27 +4,77 @@ html,body{
   height: 100%;
   width: 100%;
 }
+
+  .message{
+    background-color: #38AEF0;
+      text-align: center;
+  }
+
+
   .left-contents{
     height: 100vh;
     width: 300px;
     float: left;
-    .content1{
+    .user{
       background-color: #253141;
       height: 15%;
     }
   }
-  .box1{
+  .user_form{
     height: 30px;
     width: 100%;
-    background-color: white;
     margin: auto 0;
     position: relative;
-    top: 50px;
+    top: 45px;
   }
-  .content2{
+    .user_name{
+      font-size: 20px;
+      color: #ffffff;
+      font-family: bold;
+      position: absolute;
+      left: 20px;
+    }
+    .fas:before{
+      display:block;
+    content:"\f061";
+    width:20px;
+    height:20px;
+    font-family: "Font Awesome 5 Free";
+    font-weight:900;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    }
+    .fa-edit:before{
+        display:block;
+    content:"\f061";
+    width:20px;
+    height:20px;
+    font-family: "Font Awesome 5 Free";
+    font-weight:900;
+    color: white;
+    position: absolute;
+    right: 40px;
+    top: 5px;
+    }
+
+  .group{
     background-color: #2f3e51;
-    height: 85%;
+    height:85%;
     width: 100%;
+    .group_box{
+      height: 100px;
+      color:#ffffff;
+      padding-top: 20px;
+      padding-left: 20px;
+      .group_box p{
+        font-size: 15px;
+      }
+      .text{
+        font-size: 11px;
+      }
+    }
   }
 
 
@@ -32,16 +82,107 @@ html,body{
     height: 100vh;
     width: calc(100vw - 300px);
     float: left;
-    .content3{
+    position: relative;
+    .up_content{
       height: 15%;
       border: 1px solid #eeeeee;
+      input[type="button"]{
+        height: 50px;
+        width: 70px;
+        border: solid 1px #38AEF0;
+        position: absolute;
+        top: 55px;
+        right: 60px;
+      }
+      .group_name{
+        height: 100px;
+        width: 600px;
+        padding-top: 35px;
+        padding-left: 40px;
+        font-size: 20px;
+        color: #333333;
+        .member{
+          font-size:12px;
+          color:#999999;
+          margin-top: 15px;
+        }
+      }
     }
   }
-      .content4{
-        height: calc(100vh - 15% - 100px);
+
+
+    .mid_content{
+      height: calc(100vh - 15% - 90px);
+      .mid_box{
+        height: 100px;
+        padding-top: 46px;
+        margin-left: 40px;
+        .mid_name{
+          font-size: 16px;
+          font-family: bold;
+          color:#434A54;
+          float: left;
+        }
+        .mid_day{
+          font-size:12px;
+          color: #999999;
+          float: left;
+          padding-left: 10px;
+        }
+        .mid_text{
+          font-size:14px;
+          color: #434A54;
+          clear: both;
+          padding-top: 10px;
+        }
       }
-        .content5{
-          background-color: #AAAAAA;
-          height: 100px;
-          width: 100%;
+    }
+
+
+    .down_content{
+      background-color: #AAAAAA;
+      height: 88px;
+       width: 100%;
+       form{
+        position: relative;
+        height: 50px;
+          .text_box{
+            height: 50px;
+            input[type="text"]{
+              height: 50px;
+              width: 63vw;
+              position: relative;
+              top: 20px;
+              left: 40px;
+              z-index: 1;
+            }
+            .image_box{
+              position: absolute;
+              top: 40px;
+              right: 200px;
+              z-index: 2;
+            }
+            .fa-image{
+           display:block;
+           content:"\f061";
+           width:20px;
+           height:20px;
+           font-family: "Font Awesome 5 Free";
+           font-weight:900;
+            }
+            #filesend{
+              display: none;
+            }
+          }
+        }
+          input[type="submit"]{
+            color: white;
+            background-color: #38AEF0;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            bottom: 20px;
+            right: 40px;
+          }
         }
