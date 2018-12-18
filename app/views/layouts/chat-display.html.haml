@@ -1,0 +1,44 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ChatSpace
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %link{:rel=>"stylesheet" ,:href=>"https://use.fontawesome.com/releases/v5.6.1/css/all.css", :integrity=>"sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" ,:crossorigin=>"anonymous"}
+  %body
+    %header
+      .message
+        %p チャットグループが作成されました。
+      .left-contents
+        .user
+          .user_form
+            .user_name sample
+            %i.fas.fa-cog
+            %i.far.fa-edit
+        .group
+          .group_box
+            %p sample
+            .text sample
+      .right-contents
+        .up_content
+          .group_name
+            %p sample
+            .member Member:sample
+          %input{:type => :button, :value => :edit}
+        .mid_content
+          .mid_box
+            .mid_name sample
+            .mid_day 20xx-xx-xx
+            .mid_text sample
+        .down_content
+          %form
+            .text_box
+              %input{:type => :text, :name => :text, :placeholder => "  type a message" }
+              .image_box
+                %input{:type => :file, :name => :datafile, :id => :filesend}
+                %label{:for => :filesend}
+                  %i.far.fa-image
+            %input{:type => :submit, :name => :submit, :value => :send, :class => :submit }
+    = yield

@@ -1,6 +1,8 @@
 @import "./reset";
 @import './color_stock.scss/';
 @import './awesome.scss/';
+@import "modules/user";
+@import "modules/flash";
 
 html,body{
   height: 100%;
