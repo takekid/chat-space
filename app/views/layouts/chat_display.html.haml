@@ -3,7 +3,7 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title ChatSpace
-    = stylesheet_link_tag    'chat_display', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     %link{:rel=>"stylesheet" ,:href=>"https://use.fontawesome.com/releases/v5.6.1/css/all.css", :integrity=>"sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" ,:crossorigin=>"anonymous"}
@@ -41,4 +41,16 @@
                 %label{:for => :filesend}
                   %i.far.fa-image
             %input{:type => :submit, :name => :submit, :value => :send, :class => :submit }
+    = yield
+
+    !!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ChatSpace
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = render 'layouts/notifications'
     = yield
