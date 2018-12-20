@@ -12,7 +12,6 @@
         margin-top: 35px;
       }
       &__members {
-        @include flexbox;
         color: $light_gray;
         font-size: 12px;
         margin-top: 15px;
@@ -23,15 +22,15 @@
       }
     }
     .right-header {
-      border: 1px solid $light_blue;
-      color: $light_blue;
+      border: 1px solid $side_blue_light;
+      color: $side_blue_light;
       float: right;
       height: 40px;
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
       &__button {
-        color: $light_blue;
+        color: $side_blue_light;
         text-decoration: none;
       }
     }
@@ -46,7 +45,7 @@
       .upper-message {
         display: flex;
         &__user-name {
-          color: $black;
+          color: black;
           font-size: 16px;
           font-weight: bold;
         }
@@ -59,7 +58,7 @@
       .lower-message {
         margin-top: 10px;
         &__content {
-          color: $black;
+          color: black;
           font-size: 14px;
           margin-bottom: 40px;
         }
@@ -92,7 +91,7 @@
       }
     }
     &__submit {
-      background-color: $light_blue;
+      background-color: $side_blue_light;
       border: none;
       color: $white;
       float: right;
