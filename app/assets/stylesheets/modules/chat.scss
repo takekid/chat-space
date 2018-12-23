@@ -1,20 +1,25 @@
 .chat {
+  height: 100vh;
   width: calc(100% - 300px);
+  float: left;
   .header {
     box-sizing: border-box;
+    border: 1px solid #eee;
     height: 100px;
     padding: 0 40px;
     .left-header {
+      height: 50px;
+      width: 55vw;
       float: left;
-      &__title {
+      margin: 20px auto;
+      h3.header__title{
         color: #333;
         font-size: 20px;
-        margin-top: 35px;
       }
-      &__members {
+      h3.header__members{
         color: $light_gray;
         font-size: 12px;
-        margin-top: 15px;
+        padding: 10px;
         .member {
           display: inline-block;
           padding-right: 5px;
@@ -31,7 +36,6 @@
       padding: 0 20px;
       &__button {
         color: $side_blue_light;
-        text-decoration: none;
       }
     }
   }
@@ -41,6 +45,7 @@
     box-sizing: border-box;
     padding: 46px 40px 0;
     height: calc(100% - 100px - 90px);
+    overflow-y: scroll;
     .message {
       .upper-message {
         display: flex;
@@ -71,34 +76,33 @@
     box-sizing: border-box;
     height: 90px;
     padding: 20px 50px 20px 40px;
+    position: relative;
     &__message {
       border: none;
-      float: left;
       height: 50px;
       width: calc(100% - 150px);
     }
-    &__mask {
-      background-color: $white;
-      float: left;
-      height: 50px;
-      padding-right: 10px;
-      &__image {
+      .fa-image{
+        font-weight: 900;
         font-size: 20px;
         line-height: 50px;
+        position: absolute;
+        top: 20px;
+        right: 15vw;
+        z-index: 1;
       }
       .hidden {
         display: none;
       }
-    }
     &__submit {
-      background-color: $side_blue_light;
-      border: none;
-      color: $white;
-      float: right;
-      font-size: 16px;
-      height: 50px;
-      margin-left: 15px;
-      padding: 0 30px;
+            color: white;
+            background-color: $sky-blue;
+            height: 50px;
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            bottom: 20px;
+            right: 40px;
     }
   }
 }
