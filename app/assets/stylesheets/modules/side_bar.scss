@@ -4,6 +4,7 @@
   width: 300px;
   height: 100vh;
   float: left;
+  overflow: scroll;
   .header {
     background-color: $left_content_color;
     height: 100px;
