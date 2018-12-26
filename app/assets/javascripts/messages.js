@@ -60,13 +60,11 @@ $(function(){
       dataType: 'json'
     })
     .done(function(data){
-      if(data.length !== 0){
         $.each(data, function(i,data){
           var html = buildHTML(data)
           $('.messages').append(html);
           scroll();
         });
-      }
     })
     .fail(function(){
       alert('更新に失敗しました');
