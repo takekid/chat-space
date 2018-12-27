@@ -5,20 +5,16 @@
       %h3.header__title
         = @group.name
       %h3.header__members
-        = current_user.name
+        - @group.users.each do |member|
+          = member.name
         .member
     .right-header
       = link_to edit_group_path(@group) do
         %h3.header__button edit
   .messages
     = render @messages
-    .message
-      .upper-message
-        %h3.message__user-name
-        %h3.message__date
-      .lower-message
   .form
-    = form_for [@group, @message],id:"new_message" do |f|
+    = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
       .form__mask
       = f.label :image, class: 'form__mask__image' do

@@ -4,7 +4,7 @@ $(function(){
     if (message.image.url) {
     InputImage = `<img src="${message.image.url}">`;
   }
-    var html = `<div class="message">
+  var html = `<div class="message" data-message-id=${message.id}>
                       <div class="upper-message">
                           <div class="upper-message__user-name">
                             ${ message.user_name }
@@ -45,4 +45,29 @@ $(function(){
       alert('error');
     })
     })
+
+  var interval = setInterval(function(){
+    if(window.location.href.match(/\/groups\/\d+\/messages/)) {
+      var message_id = $('.message').last().data('message-id');
+      $.ajax({
+      url: location.href,
+      type:'GET',
+      data: { id: message_id },
+      dataType: 'json'
+    })
+    .done(function(data) {
+      data.forEach(function(message) {
+        var html = buildHTML(message);
+        $('.messages').append(html);
+        $('.form__message').val('');
+        $('.form__submit').prop('disabled', false);
+        $(".messages").animate({scrollTop:$('.messages')[0].scrollHeight},'fast');
+      })
+        })
+    .fail(function(){
+      alert('更新に失敗しました');
+    });
+    } else {
+      clearInterval(interval);
+    }},5000);
   });
