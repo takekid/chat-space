@@ -59,7 +59,7 @@ $(function(){
       data.forEach(function(message) {
         var html = buildHTML(message);
         $('.messages').append(html);
-        $('.form__submit').val('');
+        $('.form__message').val('');
         $('.form__submit').prop('disabled', false);
         $(".messages").animate({scrollTop:$('.messages')[0].scrollHeight},'fast');
       })
