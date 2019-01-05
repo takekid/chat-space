@@ -42,6 +42,11 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'capybara'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
@@ -64,3 +69,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry-byebug'
 gem 'pry-rails'
+
+group :production do
+  gem 'unicorn'
+end
