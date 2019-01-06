@@ -20,13 +20,14 @@
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
-      = f.label :name, "チャットメンバー",class: "chat-group-form__label"
+      = f.label :name, "チャットメンバー",class: "chat-group-form__label user_search_field"
     .chat-group-form__field--right
       #chat-group-users
-        #chat-group-user-22.chat-group-user.clearfix
+      - @group.users.each do |user|
+        .chat-group-user.clearfix
           = f.hidden_field :user_ids, value: current_user.id, multiple: true
           %p.chat-group-user__name
-            = current_user.name
+            = user.name
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left

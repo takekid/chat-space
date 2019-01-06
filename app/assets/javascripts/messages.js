@@ -2,14 +2,14 @@ $(function(){
   function buildHTML(message){
     var InputImage = '';
     if (message.image.url) {
-    InputImage = `<img src="${message.image.url}">`;
+    var InputImage = `<img src="${message.image.url}" class: "lower-message__image">`;
   }
-  var html = `<div class="message" data-message-id=${message.id}>
+    var html = `<div class="message" data-message-id=${message.id}>
                       <div class="upper-message">
                           <div class="upper-message__user-name">
                             ${ message.user_name }
                           </div>
-                          <div class="upper-message__date">
+                          <div class="upper-message_date">
                             ${ message.date }
                           </div>
                       </div>
@@ -37,9 +37,10 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('.form__message').val('');
       $('.form__submit').prop('disabled', false);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+      $('#message_content').val("");
+      $('#message_image').val("");
     })
     .fail(function(){
       alert('error');
@@ -59,7 +60,7 @@ $(function(){
       data.forEach(function(message) {
         var html = buildHTML(message);
         $('.messages').append(html);
-        $('.form__message').val('');
+        $('#message_content').val("");
         $('.form__submit').prop('disabled', false);
         $(".messages").animate({scrollTop:$('.messages')[0].scrollHeight},'fast');
       })
